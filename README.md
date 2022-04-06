@@ -1,4 +1,4 @@
-![image](./src/assets/capture.png)
+![image](./src/assets/capture1.png)
 
 # Snapface
 
