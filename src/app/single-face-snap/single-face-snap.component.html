@@ -5,7 +5,7 @@
     <img [src]="faceSnapEnfant.imageUrl" [alt]="faceSnapEnfant.title">
   </p>
   <p>{{faceSnapEnfant.description}}</p>
-  <p *ngIf="faceSnapEnfant.localisation">Photo prise à {{faceSnapEnfant.localisation}}</p>
+  <p *ngIf="faceSnapEnfant.location">Photo prise à {{faceSnapEnfant.location}}</p>
   <p>Mise en ligne le {{faceSnapEnfant.createdDate | date: "medium" }}</p>
   <p>
     <button type="button" (click)="onAddSnap()" id="btnSnap">

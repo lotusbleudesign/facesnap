@@ -6,7 +6,7 @@ This project is an simple SPA ANGULAR, based on Open Classroom.
 
 # Features
 
-Based on CRUD , localStorage
+Based on CRUD , localStorage, JSON server , Observable, FormBuilder.
 
 # Website
 

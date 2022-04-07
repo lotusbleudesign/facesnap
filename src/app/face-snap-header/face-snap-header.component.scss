@@ -20,3 +20,17 @@ a {
   color: #164662;
   text-decoration: underline;
 }
+
+button {
+  margin: 5px;
+  background-color: #ebe5e6;
+  border: none;
+  color: #164662;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: none;
+  &:active {
+    transform: translate(1px, 1px);
+    box-shadow: lightgray 0 0 5px;
+  }
+}

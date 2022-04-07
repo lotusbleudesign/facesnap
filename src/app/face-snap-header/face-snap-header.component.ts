@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-face-snap-header',
@@ -6,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./face-snap-header.component.scss']
 })
 export class FaceSnapHeaderComponent implements OnInit {
+
   title = "SnapFace"
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  onAddNewFaceSnap(): void {
+    this.router.navigateByUrl('create')
+  }
 }

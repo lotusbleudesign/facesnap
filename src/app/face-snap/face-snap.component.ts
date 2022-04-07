@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { FaceSnap } from '../models/face-snap.model';
-import { FaceSnapService } from '../services/face-snap.service';
 
 @Component({
   selector: 'app-face-snap',
@@ -22,4 +21,5 @@ export class FaceSnapComponent implements OnInit {
   onViewFaceSnap() {
     this.router.navigateByUrl(`facesnaps/${this.faceSnapEnfant.id}`)
   }
+
 }

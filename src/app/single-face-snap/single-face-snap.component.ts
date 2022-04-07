@@ -47,4 +47,6 @@ export class SingleFaceSnapComponent implements OnInit {
       localStorage.setItem(`${this.facesnapId}`, "SNAPPED")
     }
   }
+
+
 }

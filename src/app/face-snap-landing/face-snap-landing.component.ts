@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +9,18 @@ import { Router } from '@angular/router';
 })
 export class FaceSnapLandingComponent {
 
+  emailUser!: string;
+  adresseInput!: string;
+
   constructor(private router: Router) { }
 
   goToFacesnap(): void {
     this.router.navigateByUrl("facesnaps")
   }
+
+  onSubmitForm(form: NgForm) {
+    console.log(this.emailUser);
+    console.log(form.value);
+  }
+
 }

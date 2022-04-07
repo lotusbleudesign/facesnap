@@ -3,6 +3,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .landing-block {
   // position: absolute;
   // top: 50%;
@@ -21,4 +22,9 @@ button {
     transform: translate(1px, 1px);
     box-shadow: lightgray 0 0 5px;
   }
+}
+
+input {
+  margin: 5px;
+  width: 200px;
 }

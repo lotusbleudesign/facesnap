@@ -1,3 +1,4 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { FaceSnap } from "../models/face-snap.model";
 
@@ -15,7 +16,7 @@ export class FaceSnapService {
       createdDate: new Date(),
       snaps: 430,
       imageUrl: "https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U",
-      localisation: "Paris"
+      location: "Paris"
     },
     {
       id: 2,
@@ -24,7 +25,7 @@ export class FaceSnapService {
       createdDate: new Date(),
       snaps: 22,
       imageUrl: "https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI",
-      localisation: "Morzine"
+      location: "Morzine"
     },
     {
       id: 3,
@@ -60,6 +61,8 @@ export class FaceSnapService {
     }
   ]
 
+  constructor(private http: HttpClient) { }
+
   getAllFaceSnaps(): FaceSnap[] {
     return this.myfaceSnapParent;
   }
@@ -77,4 +80,17 @@ export class FaceSnapService {
     const facesnap = this.getFaceSnapById(facesnapid)
     snapType == true ? facesnap.snaps++ : facesnap.snaps--;
   }
+
+  addFaceSnap(formValue: {
+    title: string, description: string, imageUrl: string, location?: string
+  }) {
+    const faceSnap: FaceSnap = {
+      ...formValue, // on récupère les prorps de l'objet
+      createdDate: new Date(),
+      snaps: 0,
+      id: this.myfaceSnapParent[this.myfaceSnapParent.length - 1].id + 1
+    }
+    this.myfaceSnapParent.push(faceSnap)
+  }
+
 }
